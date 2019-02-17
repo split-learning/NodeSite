@@ -103,6 +103,9 @@ class CodingVideo {
           this.multiEdit.editor.removeLines()
           this.multiEdit.editor.session.setAnnotations([])
         }
+        $(".filename-tab").each(function(){
+          $(this).removeClass("flash")
+        })
 
         this.selectFile(prev)
         this.loc = 0
