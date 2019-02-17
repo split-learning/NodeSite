@@ -70,6 +70,10 @@ function onPlayerReady(event) {
   livePlayer.player.mute()
   livePlayer.player.seekTo(0)
   livePlayer.player.playVideo()
+
+  $('#vidTitle').text(livePlayer.player.getVideoData().title)
+  if(livePlayer.player.getVideoData().author != "")
+    $('#vidAuthor').text("By " + livePlayer.player.getVideoData().author)
 }
 
 
