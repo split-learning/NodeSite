@@ -16,4 +16,4 @@ EXPOSE 3000
 EXPOSE 80
 
 # start app
-CMD ["PORT=80;","npm", "start"]
+CMD ["PORT=80","npm", "start"]

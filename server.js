@@ -13,6 +13,7 @@ app.use("*", function (req, res) {
 	res.sendFile(path + "error-404.html");
 });
 
-app.listen(3000, function () {
-	console.log("Server running at Port 3000");
+port = process.env.PORT || 3000;
+app.listen(port, function () {
+	console.log("Server running at Port " + port);
 });
