@@ -13,8 +13,8 @@
 }
 
 #vidInfoContainer {
-  margin-left: 4.25em;
-  margin-right: 4.25em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 #vidInfo {
@@ -47,11 +47,23 @@
 }
 
 #codeSide .active {
-  background-color: #2055CF;
+  background-color: #e94e0c;
 }
 
 #editor {
   position: absolute;
   width: 90%;
-  height: 90%;
+  height: 85%;
+}
+
+.comment-container {
+  margin: 16px 2em 0 2em;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.replies {
+  font-weight: bold;
 }
