@@ -49,7 +49,7 @@ class CodingVideo {
       let prev = this.selectedFile
       addFileToUI(filename)
       this.multiEdit.addFile(filename)
-      // this.multiEdit.editor.getSession().setOption("useWorker", false)
+      this.multiEdit.editor.getSession().setOption("useWorker", false)
       this.files.push(filename)
 
       if(prev != "") {
