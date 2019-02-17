@@ -3,8 +3,11 @@ $("#rows-container").ready(() => {
     rows.forEach(category => {
         let row = $("<div class='row'>")
 
-        let videos = $("<div class='videos'>")
-        row.append($("<div class='row-title'>").html(category.name))
+        let videos = $("<div class='videos'>");
+        row.append($("<div class='row-title'>").html(
+            "<a style='text-decoration: none; color: black;' href=\"/category?cat="+
+                encodeURIComponent(category.name)+"\">" +
+            category.name + "</a>"));
 
         category.data.forEach(data => {
             let video_cell = $("<div class='video-cell'>")
