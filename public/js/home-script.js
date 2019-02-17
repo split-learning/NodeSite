@@ -1,15 +1,19 @@
 $("#rows-container").ready(() => {
     let rows = prepJSON()
     rows.forEach(category => {
-        console.log(category)
         let row = $("<div class='row'>")
-        category.forEach(vid => {
-            let video_cell = $("<div class='video_cell'>")
-            video_cell.append($("<img class='video_thumbnail' src="+vid.img_src+"/>"))
-            video_cell.append($("<div class='video_title'>").html(vid.title))
-            video_cell.append($("<div class='video_channel'>").html(vid.channel))
-            row.append(video_cell)
+
+        let videos = $("<div class='videos'>")
+        row.append($("<div class='row-title'>").html(category.name))
+
+        category.data.forEach(data => {
+            let video_cell = $("<div class='video-cell'>")
+            video_cell.append($("<img class='video-thumbnail' src="+data.img_src+"/>"))
+            video_cell.append($("<div class='video-title'>").html(data.title))
+            video_cell.append($("<div class='video-channel'>").html(data.channel))
+            videos.append(video_cell)
         })
+        row.append(videos)
         $("#rows-container").append(row)
     })
 })
@@ -24,8 +28,8 @@ function prepJSON() {
                 tmpRow.push(
                     {
                         title: item.snippet.title,
-                        channel: item.snippet.description,
-                        img_src: item.snippet.thumbnails.high.url,
+                        channel: item.snippet.channelTitle,
+                        img_src: item.snippet.thumbnails.default.url,
                     }
                 );
             }
