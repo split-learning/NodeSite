@@ -82,7 +82,7 @@ function onPlayerReady(event) {
 	// When the player is created, but not started
 	console.log("Video Started")
 	livePlayer.player = event.target
-	livePlayer.player.mute()
+	// livePlayer.player.mute()
 	livePlayer.player.seekTo(0)
 	livePlayer.player.playVideo()
 
