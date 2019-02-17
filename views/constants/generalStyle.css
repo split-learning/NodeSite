@@ -1,0 +1,14 @@
+/* Colors */
+.primary{
+	color: #1818A3;
+}
+
+.primaryBack{
+	background-color: #1818A3;
+}
+
+/* General Document */
+body{
+	overflow-x: hidden;
+	overflow-y: hidden;
+}

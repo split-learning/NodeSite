@@ -1,0 +1,27 @@
+#contentArea {
+	background-color: #47484b;
+	height: 100vh;
+}
+
+/* Video Side */
+#player{
+	margin: auto;
+	margin-top: 1em;
+}
+
+.card{
+	margin: 1em;
+}
+
+#vidInfo{
+	border-bottom: 1px solid black;
+}
+
+
+/* Code Side */
+#editor {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+	margin: 1em;
+}

@@ -1,32 +1,75 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="styles/split-page.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script src="script.js"></script>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body>
-	<div>
-		<div>
-			<nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
-					<li><a href="/about">About us us</a></li>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../constants/generalStyle.css">
+		<link rel="stylesheet" href="styles/videoSyle.css" />
+
+		<title>Apollo Code</title>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light primaryBack">
+			<a class="navbar-brand" href="/">Apollo Code</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="/video">Video Demo <span class="sr-only">(current)</span></a>
+					</li>
 				</ul>
-			</nav>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+					<svg id="i-search" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+						<circle cx="14" cy="14" r="12" />
+						<path d="M23 23 L30 30" />
+					</svg>
+				</form>
+			</div>
+		</nav>
+
+		<div id='contentArea' class='row'>
+			<div id="videoSide" class='col-md-6 col-xs-12'>
+				<div class="card">
+					<div id="player"></div>
+					<div id="vidInfo" class="card-body">
+						<h5 class="card-title">Video Title</h5>
+						<p class="card-text">This code is sooooooo dope.</p>
+					</div>
+					<div id="moreInfo" class="card-body">
+						Look at all this info!
+					</div>
+				</div>
+			</div>
+			<div id="codeSide" class='col-md-6 col-xs-12'>
+				<div id="editor"></div>
+			</div>
 		</div>
-		<br />
-		<div class="jumbotron">
-			<p>
-				Yo mdas
-			</p>
-		</div>
-	</div>
-</body>
+
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- ACE -->
+		<script src="ace-src/ace.js" type="text/javascript" charset="utf-8"></script>
+		<!-- load ace themelist extension -->
+		<script src="ace-src/ext-themelist.js"></script>
+
+		<!-- Begin the Player and editor -->
+		<script src="js/editorControl/editor.js"></script>
+		<script src="js/editorControl/fileManager.js"></script>
+		<script src="js/editorControl/control.js"></script>
+		<script src="js/init.js"></script>
+
+	</body>
 
 </html>
