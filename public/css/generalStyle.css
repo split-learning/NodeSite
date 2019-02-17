@@ -33,8 +33,9 @@ body {
 #logo {
   font-family: monospace;
   font-size: 1.3em;
-  padding-right: 0.5em;
-  border-right: 1px solid white;
+  padding-right: 15px;
+  border-right: solid 1px black;
+  
   animation: shadow-drop-out 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -44,7 +45,8 @@ body {
 
 #logoIMG {
   width: 90px;
-  padding-right: 0.2em;
+  padding-right: 0.4em;
+  margin-left: 10px;
   animation: slide-top-out 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
