@@ -1,10 +1,19 @@
 /* Colors */
-.primary {
-  color: #1818A3;
+#overrides .primary {
+  color: #2055CF;
 }
 
-.primaryBack {
-  background-color: #1818A3;
+#overrides .primaryBack {
+  background-color: #2055CF;
+}
+
+#overrides .primaryGradient {
+	background: rgb(32,85,207);
+	background: linear-gradient(90deg, rgba(32,85,207,1) 0%, rgba(0,159,255,1) 100%);
+}
+
+#overrides .contrast {
+  color: white;
 }
 
 /* General Document */

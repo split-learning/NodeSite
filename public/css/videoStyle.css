@@ -11,6 +11,9 @@
 
 .card {
   margin: 1em;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 #vidInfo {
@@ -18,9 +21,27 @@
 }
 
 /* Code Side */
+#codeSide .nav-tabs {
+  margin-top: 1em;
+  border-bottom: 0px;
+}
+
+#codeSide .nav-item {
+
+}
+
+#codeSide .nav-link {
+  color: white;
+  background-color: #2055CF;
+}
+
+#codeSide .active {
+  color: black;
+  background-color: white;
+}
+
 #editor {
   position: absolute;
   width: 90%;
   height: 90%;
-  margin: 1em;
 }
