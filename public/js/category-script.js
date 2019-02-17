@@ -42,11 +42,14 @@ $(".banner-container").ready(() => {
 
     let banner = $("<div class='banner' style='margin-top:10px;'>")
 
+    banner.append($("<img class='banner-thumbnail' src=\"/assets/thumbnails/"+encodeURIComponent(cat)+"_logo.png\"/>"))
     let banner_cell = $("<div class='banner-cell'>")
-    banner_cell.append($("<img class='banner-thumbnail' src=\"/assets/thumbnails/"+encodeURIComponent(cat)+"_logo.png\"/>"))
+    banner.append(banner_cell);
     banner_cell.append($("<div class='banner-title'>").html("Welcome to the " + cat + " Channel"))
     banner_cell.append($("<div class='banner-channel'>").html("Come try some " + cat + " tutorials!"))
-    banner.append(banner_cell)
+    banner_cell.append($("<div class='banner-channel'>").html("There are " + 
+        (Math.floor(Math.random() * 100000) + 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        + " people on this channel."));
 
     row.append(banner)
     $(".banner-container").append(row);

@@ -12,15 +12,19 @@
   margin-top: 1em;
 }
 
+#vidInfoContainer {
+  margin-left: 4.25em;
+  margin-right: 4.25em;
+}
+
 #vidInfo {
-  margin-left: 2em;
-  margin-right: 2em;
   border-bottom: 1px solid black;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
 }
 
 #comments {
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-top: 1em;
 }
 
 /* Code Side */
