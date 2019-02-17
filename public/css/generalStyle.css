@@ -1,15 +1,15 @@
 /* Colors */
 #overrides .primary {
-  color: #2055CF;
+  color: #f46d34;
 }
 
 #overrides .primaryBack {
-  background-color: #2055CF;
+  background-color: #f46d34;
 }
 
 #overrides .primaryGradient {
-  background: rgb(32, 85, 207);
-  background: linear-gradient(90deg, rgba(32, 85, 207, 1) 0%, rgba(0, 159, 255, 1) 100%);
+  background: rgb(244, 109, 52);
+  background: linear-gradient(90deg, rgba(244, 109, 52, 1) 0%, rgba(237, 72, 0, 1) 100%);
 }
 
 #overrides .secondary {
@@ -45,7 +45,7 @@ body {
 #logoIMG {
   width: 90px;
   padding-right: 0.2em;
-	animation: slide-top-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-top-in {
@@ -89,7 +89,7 @@ body {
 }
 
 #navList .nav-link:hover {
-  background-color: #232323;
+  background-color: #e94e0c;
   border-radius: 0.3em;
   transition: background-color 2s;
   transition: borer-radius 2s;

@@ -5,7 +5,7 @@ $("#rows-container").ready(() => {
 
         let videos = $("<div class='videos'>");
         row.append($("<div class='row-title'>").html(
-            "<a style='text-decoration: none; color: black;' href=\"/category?cat="+
+            "<a style='text-decoration: none; color: #f46d34; font-weight:bold' href=\"/category?cat="+
                 encodeURIComponent(category.name)+"\">" +
             category.name + "</a>"));
 
@@ -69,12 +69,12 @@ let featured = `{"kind":"youtube#searchListResponse","etag":"bannerXpPGQXPnxQJhL
 let arr = [
     { name: "Featured", arr: featured},
     { name: "Trending", arr: trending},
-    { name: "React", arr: react}, 
-    { name: "GoLang", arr: go}, 
-    { name: "Ruby", arr: ruby}, 
-    { name: "PHP", arr: php}, 
-    { name: "Frameworks", arr: frameworks}, 
-    { name: "Javascript",  arr: javascript}, 
+    { name: "React", arr: react},
+    { name: "GoLang", arr: go},
+    { name: "Ruby", arr: ruby},
+    { name: "PHP", arr: php},
+    { name: "Frameworks", arr: frameworks},
+    { name: "Javascript",  arr: javascript},
     { name: "C#", arr: c_sharp, image: "https://www.techcentral.ie/wp-content/uploads/2017/08/C_Sharp_logo_web.jpg"},
 ];
 
@@ -82,9 +82,11 @@ let arr = [
 // Banner stuff
 var editor = ace.edit("editor");
 editor.setTheme("ace/theme/twilight");
-editor.session.setMode("ace/mode/javascript");
+editor.session.setMode("ace/mode/html");
 editor.renderer.setScrollMargin(10, 10);
 editor.setOptions({
     // "scrollPastEnd": 0.8,
     autoScrollEditorIntoView: true
 });
+let editor_str = "<!DOCTYPE html>\n<html>\n\t<head>\n\t</head>\n\n\t<body>\n\t\t<h1>Hello World</h1>\n\t\t<h3>blue</h3>\n\t\t<p>red</p>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<img src='https://izmenamnet.ru/wp-content/uploads/366.jpg'>\n\t</body>\n</html>\n"
+editor.insert(editor_str)
