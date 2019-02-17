@@ -37,13 +37,14 @@ var aspect = 640/360
 // Find the get paramters
 const searchParams = new URLSearchParams(window.location.search)
 let youtubeID = searchParams.get('youtubeID')
+console.log("Y", youtubeID)
 if(youtubeID == undefined) {
 	youtubeID = 'rHiSsgFRgx4'
+	if(typeof HOMEPAGE != undefined) {
+		youtubeID =  'rHiSsgFRgx4' //'4K4QhIAfGKY'
+	}
 }
-
-if(typeof HOMEPAGE == undefined) {
-	youtubeID = '4K4QhIAfGKY'
-}
+console.log("Y", youtubeID)
 
 var player;
 var dataFile = null
