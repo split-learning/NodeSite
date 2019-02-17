@@ -16,14 +16,14 @@ $("#category-rows-container").ready(() => {
         }
     }
     console.log(index);
-    // if (index < 0) { window.location = "/"; }
+    if (index < 0) { window.location = "/"; }
 
     let singleRow = [rows[index]];
     singleRow.forEach(category => {
         let row = $("<div class='row'>")
 
         let videos = $("<div class='videos'>")
-        row.append($("<div class='row-title'>").html(category.name))
+        row.append($("<div class='row-title' style='font-weight:bold'>").html(category.name))
 
         category.data.forEach(data => {
             let video_cell = $("<div class='video-cell'>")
@@ -45,11 +45,12 @@ $(".banner-container").ready(() => {
     banner.append($("<img class='banner-thumbnail' src=\"/assets/thumbnails/"+encodeURIComponent(cat)+"_logo.png\"/>"))
     let banner_cell = $("<div class='banner-cell'>")
     banner.append(banner_cell);
-    banner_cell.append($("<div class='banner-title'>").html("Welcome to the " + cat + " Channel"))
-    banner_cell.append($("<div class='banner-channel'>").html("Come try some " + cat + " tutorials!"))
-    banner_cell.append($("<div class='banner-channel'>").html("There are " + 
+    banner_cell.append($("<div class='banner-title'>").html(cat))
+    banner_cell.append($("<div class='banner-channel'>").html(
         (Math.floor(Math.random() * 100000) + 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-        + " people on this channel."));
+        + " followers."));
+    banner_cell.append($("<div class='banner-channel' style='margin-top: 10px;'>").html
+        ($("<button type='button' class='btn btn-sm btn-primary'>Follow</button>")))
 
     row.append(banner)
     $(".banner-container").append(row);
