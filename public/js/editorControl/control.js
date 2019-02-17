@@ -36,6 +36,10 @@ class CodingVideo {
     return this.selectedFile
   }
 
+  getVirtualFile() {
+    return this.virtualPos.file
+  }
+
   getCurrentFile(filename) {
     this.selectedFile = filename
   }
