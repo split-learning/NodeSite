@@ -32,12 +32,11 @@ html, body {
 }
 
 .video-cell {
-    width: 290px;
+    width: 295px;
     margin-right: 10px;
 }
 
 .video-thumbnail {
-    width: 290px;
     height: 165px;
     object-fit: cover;
     width: 100%;
