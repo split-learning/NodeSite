@@ -1,5 +1,5 @@
 html, body {
-    background-color: #4e5093;
+    background-color: #ffffff;
 }
 
 .banner-container {
@@ -26,5 +26,20 @@ div {
 }
 
 .video-thumbnail {
-    
+    width: 300px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.video-title {
+    color: rgb(25, 23, 28);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.video-channel {
+    color: rgb(50, 47, 55);
+    font-size: 12px;
+    font-weight: 400
 }
