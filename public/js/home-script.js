@@ -5,7 +5,7 @@ $("#rows-container").ready(() => {
 
         let videos = $("<div class='videos'>");
         row.append($("<div class='row-title'>").html(
-            "<a style='text-decoration: none; color: #2055CF; font-weight:bold' href=\"/category?cat="+
+            "<a style='text-decoration: none; color: #f46d34; font-weight:bold' href=\"/category?cat="+
                 encodeURIComponent(category.name)+"\">" +
             category.name + "</a>"));
 
@@ -90,4 +90,3 @@ editor.setOptions({
 });
 let editor_str = "<!DOCTYPE html>\n<html>\n\t<head>\n\t</head>\n\n\t<body>\n\t\t<h1>Hello World</h1>\n\t\t<h3>blue</h3>\n\t\t<p>red</p>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<img src='https://izmenamnet.ru/wp-content/uploads/366.jpg'>\n\t</body>\n</html>\n"
 editor.insert(editor_str)
-
