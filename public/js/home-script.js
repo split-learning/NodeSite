@@ -5,7 +5,7 @@ $("#rows-container").ready(() => {
 
         let videos = $("<div class='videos'>");
         row.append($("<div class='row-title'>").html(
-            "<a style='text-decoration: none; color: black;' href=\"/category?cat="+
+            "<a style='text-decoration: none; color: #2055CF; font-weight:bold' href=\"/category?cat="+
                 encodeURIComponent(category.name)+"\">" +
             category.name + "</a>"));
 
@@ -69,12 +69,12 @@ let featured = `{"kind":"youtube#searchListResponse","etag":"bannerXpPGQXPnxQJhL
 let arr = [
     { name: "Featured", arr: featured},
     { name: "Trending", arr: trending},
-    { name: "React", arr: react}, 
-    { name: "GoLang", arr: go}, 
-    { name: "Ruby", arr: ruby}, 
-    { name: "PHP", arr: php}, 
-    { name: "Frameworks", arr: frameworks}, 
-    { name: "Javascript",  arr: javascript}, 
+    { name: "React", arr: react},
+    { name: "GoLang", arr: go},
+    { name: "Ruby", arr: ruby},
+    { name: "PHP", arr: php},
+    { name: "Frameworks", arr: frameworks},
+    { name: "Javascript",  arr: javascript},
     { name: "C#", arr: c_sharp, image: "https://www.techcentral.ie/wp-content/uploads/2017/08/C_Sharp_logo_web.jpg"},
 ];
 

@@ -23,7 +23,7 @@ $("#category-rows-container").ready(() => {
         let row = $("<div class='row'>")
 
         let videos = $("<div class='videos'>")
-        row.append($("<div class='row-title'>").html(category.name))
+        row.append($("<div class='row-title' style='font-weight:bold'>").html(category.name))
 
         category.data.forEach(data => {
             let video_cell = $("<div class='video-cell'>")
