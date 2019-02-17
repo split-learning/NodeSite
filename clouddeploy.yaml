@@ -9,7 +9,7 @@ steps:
   - set
   - image
   - deployment
-  - website
+  - website2
   - website-master-sha256=gcr.io/$PROJECT_ID/website_$BRANCH_NAME:$COMMIT_SHA
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
