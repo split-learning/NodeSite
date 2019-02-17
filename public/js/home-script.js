@@ -30,6 +30,7 @@ function prepJSON() {
                         title: item.snippet.title,
                         channel: item.snippet.channelTitle,
                         img_src: item.snippet.thumbnails.high.url,
+                        image: e.image,
                     }
                 );
             }
@@ -71,7 +72,5 @@ let arr = [
     { name: "PHP", arr: php}, 
     { name: "Frameworks", arr: frameworks}, 
     { name: "Javascript",  arr: javascript}, 
-    { name: "C#", arr: c_sharp},
+    { name: "C#", arr: c_sharp, image: "https://www.techcentral.ie/wp-content/uploads/2017/08/C_Sharp_logo_web.jpg"},
 ];
-
-console.log(prepJSON());

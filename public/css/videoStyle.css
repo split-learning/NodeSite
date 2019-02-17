@@ -1,23 +1,26 @@
 #contentArea {
-  background-color: #47484b;
+  background-color: #fafafa;
   height: 100vh;
 }
 
 /* Video Side */
+#playerContainer {
+  text-align: center;
+}
+
 #player {
-  margin: auto;
   margin-top: 1em;
 }
 
-.card {
-  margin: 1em;
-  -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
+#vidInfo {
+  margin-left: 2em;
+  margin-right: 2em;
+  border-bottom: 1px solid black;
 }
 
-#vidInfo {
-  border-bottom: 1px solid black;
+#comments {
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 /* Code Side */
@@ -28,16 +31,19 @@
 
 #codeSide .nav-item {
   padding-right: 0.25em;
+  font-size: 1em;
+  font-family: monospace;
 }
 
 #codeSide .nav-link {
   color: white;
-  background-color: #2055CF;
+  background-color: #232323;
+  border-top-left-radius: 0em;
+  border-top-right-radius: 0em;
 }
 
 #codeSide .active {
-  color: black;
-  background-color: white;
+  background-color: #2055CF;
 }
 
 #editor {

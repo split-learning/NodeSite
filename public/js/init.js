@@ -21,7 +21,7 @@ EncapEditor = new MultipleEditor(editor)
 
 
 var player;
-var playerSize = 300
+var playerSize = 450
 var aspect = 640/360
 
 // Find the get paramters
