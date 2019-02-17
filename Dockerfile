@@ -13,6 +13,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN npm install --silent
 
 EXPOSE 3000
+EXPOSE 80
 
 # start app
-CMD ["npm", "start"]
+CMD ["PORT=80;","npm", "start"]
