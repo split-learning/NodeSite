@@ -52,12 +52,14 @@ body {
 
 /* Nav List */
 #navList .nav-link {
-	transition: background-color 0.2s;
-	transition: borer-radius 0.2s;
+	background-color: none;
+	border-radius: 0em;
+	transition: background-color 2s;
+	transition: borer-radius 2s;
 }
 #navList .nav-link:hover {
 	background-color: #232323;
 	border-radius: 0.3em;
-	transition: background-color 0.2s;
-	transition: borer-radius 0.2s;
+	transition: background-color 2s;
+	transition: borer-radius 2s;
 }
