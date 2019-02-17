@@ -1,12 +1,15 @@
 
-#back {
+.banner-container {
+    opacity: 1.0;
+}
+
+.back-container {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: -100;
-    opacity:0.2;
 }​
 
 .banner-title {
@@ -23,28 +26,29 @@
 }
 
 .banner-cell {
-    width: 290px;
-    margin-right: 10px;
+    width: 800px;
+    height: 165px;
+    margin-left: 20px;
 }
 
 .banner-thumbnail {
-    width: 290px;
-    height: 165px;
-    object-fit: cover;
-    width: 100%;
-    vertical-align: center;
+    height: 300px;
+    flex-basis: 25%;
     border-radius: 4px;
     border-bottom: 0;
 }
 
 .banner-title {
-    color: rgb(25, 23, 28);
-    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
     font-weight: bold;
+    opacity: 1.0;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .banner-channel {
     color: rgb(50, 47, 55);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400
 }
