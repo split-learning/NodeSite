@@ -14,7 +14,7 @@ router.get("/video/", function (req, res) {
 	res.sendFile(path + "VideoPage/VideoPage.html");
 });
 
-router.get("/categories/:category", function (req, res) {
+router.get("/category/:category", function (req, res) {
 	res.sendFile(path + "CategoryPage/Category.html");
 });
 
