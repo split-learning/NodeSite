@@ -1,0 +1,30 @@
+html, body {
+    background-color: #4e5093;
+}
+
+.banner-container {
+    opacity: 0.5;
+    height: 40vh;
+}
+
+#rows-container {
+    
+}
+
+div {
+    border: solid 1px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.video-cell {
+
+}
+
+.video-thumbnail {
+    
+}
