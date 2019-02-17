@@ -1,15 +1,17 @@
 #contentArea {
   background-color: #fafafa;
   height: 100vh;
+  flex-wrap: nowrap;
 }
 
 /* Video Side */
-#playerContainer {
-  text-align: center;
+#videoSide {
+  max-width: 850px;
 }
 
 #player {
   margin-top: 1em;
+  margin-left: 2em;
 }
 
 #vidInfoContainer {
@@ -37,6 +39,7 @@
   padding-right: 0.25em;
   font-size: 1em;
   font-family: monospace;
+  cursor: pointer;
 }
 
 #codeSide .nav-link {
@@ -44,6 +47,7 @@
   background-color: #232323;
   border-top-left-radius: 0em;
   border-top-right-radius: 0em;
+  cursor: pointer;
 }
 
 #codeSide .active {
@@ -51,8 +55,7 @@
 }
 
 #editor {
-  position: absolute;
-  width: 90%;
+  width: 98%;
   height: 85%;
 }
 
@@ -66,4 +69,5 @@
 
 .replies {
   font-weight: bold;
+  cursor: pointer;
 }
