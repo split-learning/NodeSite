@@ -6,15 +6,11 @@ var path = __dirname + "/views/";
 app.use("/", router);
 
 router.get("/", function (req, res) {
-	res.sendFile(path + "index.html");
-});
-
-router.get("/about", function (req, res) {
-	res.sendFile(path + "about.html");
+	res.sendFile(path + "HomePage/index.html");
 });
 
 app.use("*", function (req, res) {
-	res.send("Error 404: Not Found!");
+	res.sendFile(path + "error-404.html");
 });
 
 app.listen(3000, function () {
