@@ -74,3 +74,14 @@ let arr = [
     { name: "Javascript",  arr: javascript}, 
     { name: "C#", arr: c_sharp, image: "https://www.techcentral.ie/wp-content/uploads/2017/08/C_Sharp_logo_web.jpg"},
 ];
+
+
+// Banner stuff
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/twilight");
+editor.session.setMode("ace/mode/javascript");
+editor.renderer.setScrollMargin(10, 10);
+editor.setOptions({
+    // "scrollPastEnd": 0.8,
+    autoScrollEditorIntoView: true
+});

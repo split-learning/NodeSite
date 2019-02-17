@@ -3,18 +3,26 @@ html, body {
 }
 
 .banner-container {
-    opacity: 0.5;
     height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#rows-container {
-    
+.youtube-container {
+    margin-right: 5px;
+}
+
+#editor {
+    width: 560px;
+    height: 315px;
+    margin-bottom: 6px;
+    margin-left: 5px;
 }
 
 .row {
     margin-bottom: 10px;
     margin-left: 20px;
-    margin-right: 20px;
     overflow: hidden;
 }
 
@@ -28,7 +36,6 @@ html, body {
 
 .videos {
     display: flex;
-    overflow-x: none;
 }
 
 .video-cell {
@@ -43,16 +50,23 @@ html, body {
     vertical-align: center;
     border-radius: 4px;
     border-bottom: 0;
+    cursor: pointer;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.02);
 }
 
 .video-title {
     color: rgb(25, 23, 28);
     font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .video-channel {
     color: rgb(50, 47, 55);
     font-size: 12px;
-    font-weight: 400
+    font-weight: 400;
+    cursor: pointer;
 }
