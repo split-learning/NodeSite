@@ -1,3 +1,4 @@
+const HOMEPAGE = true
 $("#rows-container").ready(() => {
     let rows = prepJSON()
     rows.forEach(category => {
@@ -88,5 +89,5 @@ editor.setOptions({
     // "scrollPastEnd": 0.8,
     autoScrollEditorIntoView: true
 });
-let editor_str = "<!DOCTYPE html>\n<html>\n\t<head>\n\t</head>\n\n\t<body>\n\t\t<h1>Hello World</h1>\n\t\t<h3>blue</h3>\n\t\t<p>red</p>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<img src='https://izmenamnet.ru/wp-content/uploads/366.jpg'>\n\t</body>\n</html>\n"
-editor.insert(editor_str)
+// let editor_str = "<!DOCTYPE html>\n<html>\n\t<head>\n\t</head>\n\n\t<body>\n\t\t<h1>Hello World</h1>\n\t\t<h3>blue</h3>\n\t\t<p>red</p>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<br>\n\t\t<img src='https://izmenamnet.ru/wp-content/uploads/366.jpg'>\n\t</body>\n</html>\n"
+// editor.insert(editor_str)
