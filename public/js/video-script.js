@@ -1,26 +1,22 @@
 $("body").on('click', "#codeSide .nav-item a", function() {
   livePlayer.selectFile($(this).text())
+  if(livePlayer.getVirtualFile() == livePlayer.getSelectedFile()) {
+  	$(this).removeClass("flash")
+  }
+
 });
 
+let prev = ''
 setInterval(function(){
-  blink(livePlayer.getVirtualFile());
-}, 800);
-
-function blink(filename) {
-	if(filename == "") {
-		return
-	}
-	console.log(filename)
-
-	$("."+classFilename(filename)).css("background-color", "");
-	$("."+classFilename(filename)).stop().animate({
-        backgroundColor: '#cfa920'
-    }, 500, 'easeOutBounce');
-
-    setInterval(function(){
-    	$("."+classFilename(filename)).css("background-color", "");
-    }, 800)
-}
+	let ch = livePlayer.getVirtualFile()
+	console.log(ch != livePlayer.getSelectedFile())
+	if(ch != livePlayer.getSelectedFile() && ch != "") {
+	 	if(ch != prev && prev != "") {
+	 		$("."+classFilename(prev)).removeClass("flash");
+	 	}
+	 	$("."+classFilename(ch)).addClass("flash");
+	 }
+}, 300);
 
 function classFilename(filename) {
   return filename.replace(".", "D")
