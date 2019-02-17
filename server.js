@@ -4,6 +4,7 @@ var router = express.Router();
 var path = __dirname + "/views/";
 
 app.use("/", router);
+app.use(express.static('public'));
 
 router.get("/", function (req, res) {
 	res.sendFile(path + "HomePage/HomePage.html");
