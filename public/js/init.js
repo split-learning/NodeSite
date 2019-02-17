@@ -21,6 +21,7 @@ if(typeof HOMEPAGE == undefined) {
 	    autoScrollEditorIntoView: true,
 	});
 }
+editor.setReadOnly(true)
 // editor.setReadOnly(true)
 // Disbale annotations
 // editor.session.setOption("useWorker", false)
