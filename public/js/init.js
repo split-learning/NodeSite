@@ -7,10 +7,19 @@ var editor = ace.edit("editor");
 editor.setTheme("ace/theme/twilight");
 editor.session.setMode("ace/mode/javascript");
 editor.renderer.setScrollMargin(10, 10);
-editor.setOptions({
-    // "scrollPastEnd": 0.8,
-    autoScrollEditorIntoView: true
-});
+// Homepage Settings
+if(typeof HOMEPAGE != undefined) {
+	editor.setOptions({
+		wrap: true,
+		fontSize: "1.3em",
+		autoScrollEditorIntoView: true,
+	})
+} else {
+	editor.setOptions({
+	    // "scrollPastEnd": 0.8,
+	    autoScrollEditorIntoView: true,
+	});
+}
 // editor.setReadOnly(true)
 // Disbale annotations
 // editor.session.setOption("useWorker", false)
@@ -31,7 +40,7 @@ if(youtubeID == undefined) {
 	youtubeID = 'rHiSsgFRgx4'
 }
 
-if(HOMEPAGE != undefined) {
+if(typeof HOMEPAGE != undefined) {
 	youtubeID = '4K4QhIAfGKY'
 }
 
