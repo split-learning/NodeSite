@@ -8,7 +8,7 @@ editor.setTheme("ace/theme/twilight");
 editor.session.setMode("ace/mode/javascript");
 editor.renderer.setScrollMargin(10, 10);
 // Homepage Settings
-if(typeof HOMEPAGE != undefined) {
+if(typeof HOMEPAGE == undefined) {
 	editor.setOptions({
 		wrap: true,
 		fontSize: "1.3em",
@@ -17,6 +17,7 @@ if(typeof HOMEPAGE != undefined) {
 } else {
 	editor.setOptions({
 	    // "scrollPastEnd": 0.8,
+	    fontSize: "1.1em",
 	    autoScrollEditorIntoView: true,
 	});
 }
@@ -40,7 +41,7 @@ if(youtubeID == undefined) {
 	youtubeID = 'rHiSsgFRgx4'
 }
 
-if(typeof HOMEPAGE != undefined) {
+if(typeof HOMEPAGE == undefined) {
 	youtubeID = '4K4QhIAfGKY'
 }
 
