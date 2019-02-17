@@ -1,42 +1,7 @@
-let row_featured = [
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Frameworks/frame_3.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Ruby/ruby_2.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/javascript/javascript_2.jpg" },
-]
-let row_trending = [
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/javascript/javascript_1.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/C#/C#_1.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Frameworks/frame_1.jpg" },
-]
-let row_js = [
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/javascript/javascript_1.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/javascript/javascript_2.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/javascript/javascript_3.jpg" },
-]
-let row_csharp = [
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/C#/C#_1.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/C#/C#_2.jpg" },
-]
-let row_frameworks = [
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Frameworks/frame_1.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Frameworks/frame_2.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Frameworks/frame_3.jpg" },
-]
-let row_php = [
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Php/php_1.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Php/php_2.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Php/php_3.jpg" },
-]
-let row_ruby = [
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Ruby/ruby_1.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Ruby/ruby_2.jpg" },
-    { title: "A Video", channel: "Astronaut", img_src: "/assets/thumbnails/Ruby/ruby_3.jpg" },
-]
-
-let rows = [row_featured, row_trending, row_js, row_csharp, row_frameworks, row_php, row_ruby]
-
 $("#rows-container").ready(() => {
+    let rows = prepJSON()
     rows.forEach(category => {
+        console.log(category)
         let row = $("<div class='row'>")
         category.forEach(vid => {
             let video_cell = $("<div class='video_cell'>")
@@ -45,10 +10,9 @@ $("#rows-container").ready(() => {
             video_cell.append($("<div class='video_channel'>").html(vid.channel))
             row.append(video_cell)
         })
+        $("#rows-container").append(row)
     })
-    $("#rows-container").append(rows)
 })
-
 
 function prepJSON() {
     let rows = []
@@ -75,10 +39,6 @@ function prepJSON() {
     });
     return rows;
 }
-
-$("#rows-container").ready(() => {
-    console.log('row container ready')
-})
 
 let react = `{"kind":"youtube#searchListResponse","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/3RPIXdNNwgyMuWsn9qd9WcChsRQ","nextPageToken":"CAoQAA","regionCode":"US","pageInfo":{"totalResults":1000000,"resultsPerPage":10},"items":[{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/yNcXJEMIBDB_NFqq4a4gyQK8JeU","id":{"kind":"youtube#video","videoId":"Ke90Tje7VS0"},"snippet":{"publishedAt":"2018-07-16T16:51:44.000Z","channelId":"UCWv7vMbMWH4-V0ZXdmDpPBA","title":"Learn React - React Crash Course 2019 - React Tutorial with Examples | Mosh","description":"Learn React - React Crash Course 2019 - React Tutorial with Examples Get the COMPLETE Course: http://programmingwithmosh.com/courses/react ...","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/Ke90Tje7VS0/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/Ke90Tje7VS0/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/Ke90Tje7VS0/hqdefault.jpg","width":480,"height":360}},"channelTitle":"Programming with Mosh","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/Q0W_EYL6Un-KfiPr_G0JfS1qAuo","id":{"kind":"youtube#video","videoId":"sBws8MSXN7A"},"snippet":{"publishedAt":"2019-01-03T21:20:36.000Z","channelId":"UC29ju8bIPH5as8OGnQzwJyA","title":"React JS Crash Course - 2019","description":"In this crash course you will learn what React JS is and the fundamentals such as components, state, props, JSX, events, etc. React Front To Back on Udemy: ...","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/sBws8MSXN7A/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/sBws8MSXN7A/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/sBws8MSXN7A/hqdefault.jpg","width":480,"height":360}},"channelTitle":"Traversy Media","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/bkLf-NmxnDhvnZqtZM0Qjm2HAa0","id":{"kind":"youtube#video","videoId":"DLX62G4lc44"},"snippet":{"publishedAt":"2018-12-18T16:21:19.000Z","channelId":"UC8butISFwT-Wl7EV0hUK0BQ","title":"Learn React.js - Full Course for Beginners - Tutorial","description":"React is a JavaScript library for building dynamic web applications. Upon completion of this course, you'll know everything you need in order to build web ...","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/DLX62G4lc44/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/DLX62G4lc44/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/DLX62G4lc44/hqdefault.jpg","width":480,"height":360}},"channelTitle":"freeCodeCamp.org","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/6nIAQnBXfM3nXF96G9U7aWQQRIc","id":{"kind":"youtube#playlist","playlistId":"PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG"},"snippet":{"publishedAt":"2018-07-27T07:15:26.000Z","channelId":"UCW5YeuERMmlnqo4oq8vwUpg","title":"Complete React Tutorial (with Redux)","description":"In this complete React tutorial series, we'll cover all the basics of React, from the ground up, right through to creating full SPA's using Create React App, the ...","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/OxIDLw0M-m0/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/OxIDLw0M-m0/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/OxIDLw0M-m0/hqdefault.jpg","width":480,"height":360}},"channelTitle":"The Net Ninja","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/0cTw5C09rGh4QJDa1y3JoVKJlqo","id":{"kind":"youtube#playlist","playlistId":"PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b"},"snippet":{"publishedAt":"2016-02-02T17:08:03.000Z","channelId":"UCVTlvUkGslCV_h-nSAId8Sw","title":"React JS Tutorials","description":"","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/MhkGQAoc7bc/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/MhkGQAoc7bc/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/MhkGQAoc7bc/hqdefault.jpg","width":480,"height":360}},"channelTitle":"LearnCode.academy","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/ESm1eeI_slr-EEWR9xI9O3jQK1w","id":{"kind":"youtube#video","videoId":"A71aqufiNtQ"},"snippet":{"publishedAt":"2016-11-12T17:59:51.000Z","channelId":"UC29ju8bIPH5as8OGnQzwJyA","title":"React JS Crash Course","description":"UPDATED VERSION (2019): https://www.youtube.com/watch?v=sBws8MSXN7A In this video we will cover the fundamentals for React.js including the following.","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/A71aqufiNtQ/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/A71aqufiNtQ/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/A71aqufiNtQ/hqdefault.jpg","width":480,"height":360}},"channelTitle":"Traversy Media","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/itDvs6eyHEZy-rYE94rbqxnQQcE","id":{"kind":"youtube#video","videoId":"S66rHpyU-Eg"},"snippet":{"publishedAt":"2018-02-03T20:29:07.000Z","channelId":"UC8Szh5ZJeGFBWyqKyTCVPpA","title":"React Tutorial - Learn ReactJS and build a simple CRUD app","description":"Learn ReactJS with this tutorial! React for both beginners and non-beginners. Click on the times below to jump straight to that section: 1) 00:00 - Topics 2) 00:19 ...","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/S66rHpyU-Eg/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/S66rHpyU-Eg/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/S66rHpyU-Eg/hqdefault.jpg","width":480,"height":360}},"channelTitle":"Learn Coding Tutorials","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/3-jnGk0lsJLM5pjEHwJmOLw8_0I","id":{"kind":"youtube#video","videoId":"pgAvVxowaYU"},"snippet":{"publishedAt":"2017-10-26T15:00:04.000Z","channelId":"UCSJbGtTlrDami-tDGPUV9-w","title":"ReactJS Tutorial for Beginners - Getting Started with React","description":"My new React course on Udemy is released and I'm so excited as this is the most comprehensive course ever released by Academind! Let me give you some ...","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/pgAvVxowaYU/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/pgAvVxowaYU/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/pgAvVxowaYU/hqdefault.jpg","width":480,"height":360}},"channelTitle":"Academind","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/1WeHR6R9Y1ZCGxlLqYs2RUZpE6g","id":{"kind":"youtube#video","videoId":"jL_ILGuz2aw"},"snippet":{"publishedAt":"2019-01-04T13:35:53.000Z","channelId":"UCg7GE5bWGvBGnvjt7ZiL04g","title":"The Complete React and Redux Course | Full Tutorial for Beginners | Build Single Page Application","description":"The Complete React JS and Redux Course | Full Tutorial for Beginners | Build Single Page Application | Learn React from Scratch | Learn Redux from Scratch ...","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/jL_ILGuz2aw/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/jL_ILGuz2aw/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/jL_ILGuz2aw/hqdefault.jpg","width":480,"height":360}},"channelTitle":"ShareForLearning","liveBroadcastContent":"none"}},{"kind":"youtube#searchResult","etag":"XpPGQXPnxQJhLgs6enD_n8JR4Qk/RQ3pq6B1DL8aF52DwppzeR5d7og","id":{"kind":"youtube#playlist","playlistId":"PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA"},"snippet":{"publishedAt":"2016-06-27T23:39:28.000Z","channelId":"UCJbPGzawDH1njbqV-D5HqKw","title":"React JS Tutorials for Beginners","description":"Official playlist for thenewboston React JS Tutorials for Beginners!","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/-AbaV3nrw6E/default.jpg","width":120,"height":90},"medium":{"url":"https://i.ytimg.com/vi/-AbaV3nrw6E/mqdefault.jpg","width":320,"height":180},"high":{"url":"https://i.ytimg.com/vi/-AbaV3nrw6E/hqdefault.jpg","width":480,"height":360}},"channelTitle":"thenewboston","liveBroadcastContent":"none"}}]}`
 
