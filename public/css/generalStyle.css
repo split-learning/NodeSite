@@ -35,17 +35,17 @@ body {
   font-size: 1.3em;
   padding-right: 0.5em;
   border-right: 1px solid white;
-  animation: shadow-drop-out 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: shadow-drop-out 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 #logo:hover>#logoIMG {
-  animation: slide-top-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top-in 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 #logoIMG {
   width: 90px;
   padding-right: 0.2em;
-  animation: slide-top-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top-out 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-top-in {
@@ -59,8 +59,8 @@ body {
   100% {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
 
@@ -68,8 +68,8 @@ body {
   0% {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
   }
 
   100% {

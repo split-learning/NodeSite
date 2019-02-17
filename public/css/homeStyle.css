@@ -3,7 +3,7 @@ html, body {
 }
 
 .banner-container {
-    height: 50vh;
+    height: 55vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +14,10 @@ html, body {
 }
 
 #editor {
-    width: 680px;
-    height: 400px;
+    width: 600px;
+    height: 450px;
     margin-bottom: 6px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .row {

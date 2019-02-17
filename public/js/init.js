@@ -30,6 +30,11 @@ let youtubeID = searchParams.get('youtubeID')
 if(youtubeID == undefined) {
 	youtubeID = 'rHiSsgFRgx4'
 }
+
+if(HOMEPAGE != undefined) {
+	youtubeID = '4K4QhIAfGKY'
+}
+
 var player;
 var dataFile = null
 var livePlayer = null
