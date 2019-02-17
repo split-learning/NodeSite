@@ -1,0 +1,50 @@
+
+#back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -100;
+    opacity:0.2;
+}​
+
+.banner-title {
+    font-size: 18px;
+    margin-bottom:10px;
+    border-bottom: solid 1px grey;
+    padding: 0 0 0 4px;
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    overflow-x: none;
+}
+
+.banner-cell {
+    width: 290px;
+    margin-right: 10px;
+}
+
+.banner-thumbnail {
+    width: 290px;
+    height: 165px;
+    object-fit: cover;
+    width: 100%;
+    vertical-align: center;
+    border-radius: 4px;
+    border-bottom: 0;
+}
+
+.banner-title {
+    color: rgb(25, 23, 28);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.banner-channel {
+    color: rgb(50, 47, 55);
+    font-size: 12px;
+    font-weight: 400
+}
