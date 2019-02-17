@@ -55,3 +55,20 @@
   width: 90%;
   height: 90%;
 }
+
+.comment-container {
+  display: flex;
+  margin-top: 12px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.comment-text {
+
+}
+
+.replies {
+  font-weight: bold;
+}
