@@ -6,7 +6,11 @@ var path = __dirname + "/views/";
 app.use("/", router);
 
 router.get("/", function (req, res) {
-	res.sendFile(path + "HomePage/index.html");
+	res.sendFile(path + "HomePage/HomePage.html");
+});
+
+router.get("/video/", function (req, res) {
+	res.sendFile(path + "VideoPage/VideoPage.html");
 });
 
 app.use("*", function (req, res) {
