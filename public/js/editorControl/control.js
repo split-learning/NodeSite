@@ -49,7 +49,7 @@ class CodingVideo {
       let prev = this.selectedFile
       addFileToUI(filename)
       this.multiEdit.addFile(filename)
-      this.multiEdit.editor.getSession().setOption("useWorker", false)
+      // this.multiEdit.editor.getSession().setOption("useWorker", false)
       this.files.push(filename)
 
       if(prev != "") {
@@ -91,15 +91,20 @@ class CodingVideo {
       if(this.timestamp > ts) {
         console.log("Player Seeked backwards from " + this.timestamp + " to " + ts)
 
+        let prev = this.getSelectedFile()
         // This person skipped backwards
         // Easiest to reset the location in array, reset all code, and walk through FAST
         for(var ed in this.getFiles()) {
-          this.selectFile(ed);
+          let fn = this.getFiles()[ed]
+          this.selectFile(fn);
+          // livePlayer.multiEdit.fileManager.state[fn].selection.selectAll()
+          // this.multiEdit.fileManager.state[
           this.multiEdit.editor.selectAll()
           this.multiEdit.editor.removeLines()
           this.multiEdit.editor.session.setAnnotations([])
         }
 
+        this.selectFile(prev)
         this.loc = 0
         this.timestamp = ts
       }

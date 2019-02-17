@@ -11,9 +11,9 @@ editor.setOptions({
     // "scrollPastEnd": 0.8,
     autoScrollEditorIntoView: true
 });
-editor.setReadOnly(true)
+// editor.setReadOnly(true)
 // Disbale annotations
-editor.session.setOption("useWorker", false)
+// editor.session.setOption("useWorker", false)
 
 // Multiple file manager
 EncapEditor = new MultipleEditor(editor)
@@ -38,7 +38,6 @@ function onTranscriptReady() {
 	// Load datafile (it was loaded from transcripts)
 	dataFile = transcriptData
 	loadYoutube()
-
 }
 
 function loadYoutube() {
