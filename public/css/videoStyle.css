@@ -1,0 +1,57 @@
+#contentArea {
+  background-color: #fafafa;
+  height: 100vh;
+}
+
+/* Video Side */
+#playerContainer {
+  text-align: center;
+}
+
+#player {
+  margin-top: 1em;
+}
+
+#vidInfoContainer {
+  margin-left: 4.25em;
+  margin-right: 4.25em;
+}
+
+#vidInfo {
+  border-bottom: 1px solid black;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+#comments {
+  margin-top: 1em;
+}
+
+/* Code Side */
+#codeSide .nav-tabs {
+  margin-top: 1em;
+  border-bottom: 0px;
+}
+
+#codeSide .nav-item {
+  padding-right: 0.25em;
+  font-size: 1em;
+  font-family: monospace;
+}
+
+#codeSide .nav-link {
+  color: white;
+  background-color: #232323;
+  border-top-left-radius: 0em;
+  border-top-right-radius: 0em;
+}
+
+#codeSide .active {
+  background-color: #2055CF;
+}
+
+#editor {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+}
