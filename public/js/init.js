@@ -21,7 +21,7 @@ EncapEditor = new MultipleEditor(editor)
 
 
 var player;
-var playerSize = 300
+var playerSize = 450
 var aspect = 640/360
 
 // Find the get paramters
@@ -70,6 +70,10 @@ function onPlayerReady(event) {
   livePlayer.player.mute()
   livePlayer.player.seekTo(0)
   livePlayer.player.playVideo()
+
+  $('#vidTitle').text(livePlayer.player.getVideoData().title)
+  if(livePlayer.player.getVideoData().author != "")
+    $('#vidAuthor').text("By " + livePlayer.player.getVideoData().author)
 }
 
 
