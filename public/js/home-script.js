@@ -73,5 +73,3 @@ let arr = [
     { name: "Javascript",  arr: javascript}, 
     { name: "C#", arr: c_sharp},
 ];
-
-console.log(prepJSON());
