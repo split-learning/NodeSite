@@ -64,16 +64,23 @@ function onYouTubeIframeAPIReady() {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-  // When the player is created, but not started
-  console.log("Video Started")
-  livePlayer.player = event.target
-  livePlayer.player.mute()
-  livePlayer.player.seekTo(0)
-  livePlayer.player.playVideo()
+	// When the player is created, but not started
+	console.log("Video Started")
+	livePlayer.player = event.target
+	livePlayer.player.mute()
+	livePlayer.player.seekTo(0)
+	livePlayer.player.playVideo()
 
-  $('#vidTitle').text(livePlayer.player.getVideoData().title)
-  if(livePlayer.player.getVideoData().author != "")
-    $('#vidAuthor').text("By " + livePlayer.player.getVideoData().author)
+	$('#vidTitle').text(livePlayer.player.getVideoData().title)
+	$('#vidAuthor').text("By " + livePlayer.player.getVideoData().author)
+
+
+	var t = setInterval(function(){
+		if(livePlayer.player.getVideoData().author != ""){
+			$('#vidAuthor').text("By " + livePlayer.player.getVideoData().author)
+			clearInterval(t)
+		}
+	}, 100);
 }
 
 

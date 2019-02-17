@@ -9,7 +9,6 @@ $("body").on('click', "#codeSide .nav-item a", function() {
 let prev = ''
 setInterval(function(){
 	let ch = livePlayer.getVirtualFile()
-	console.log(ch != livePlayer.getSelectedFile())
 	if(ch != livePlayer.getSelectedFile() && ch != "") {
 	 	if(ch != prev && prev != "") {
 	 		$("."+classFilename(prev)).removeClass("flash");
