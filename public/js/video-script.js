@@ -8,6 +8,9 @@ $("body").on('click', "#codeSide .nav-item a", function() {
 
 let prev = ''
 setInterval(function(){
+	$(".filename-tab").each(function(){
+         $(this).removeClass("flash")
+     })
 	let ch = livePlayer.getVirtualFile()
 	if(ch != livePlayer.getSelectedFile() && ch != "") {
 	 	if(ch != prev && prev != "") {
