@@ -6,7 +6,7 @@ $("#rows-container").ready(() => {
 
         let videos = $("<div class='videos'>");
         row.append($("<div class='row-title'>").html(
-            "<a style='text-decoration: none; color: #f46d34; font-weight:bold' href=\"/category?cat="+
+            "<a style='text-decoration: none; color: #f46d34; font-weight:bold' href=\"category.html?cat="+
                 encodeURIComponent(category.name)+"\">" +
             category.name + "</a>"));
 
