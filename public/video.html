@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/generalStyle.css">
+		<link rel="stylesheet" href="css/homeStyle.css" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+		<link rel="icon" type="/mage/png" sizes="16x16" href="assets/favicon-16x16.png">
+		<title>Apollo Codes</title>
+	</head>
+
+	<body id="overrides">
+		<nav class="navbar navbar-expand-lg sticky-top navbar-light primaryGradient">
+			<a id="logo" class="navbar-brand contrast" href="/">
+				<img id="logoIMG" src="assets/apollo.svg" />
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul id="navList" class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link contrast" href="/video?youtubeID=cXgA1d_E-jY">Video Demo 1 <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link contrast" href="/video?youtubeID=4K4QhIAfGKY">Video Demo 2 <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link contrast" href="/video?youtubeID=rHiSsgFRgx4">Video Demo 3 <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+				<div class="search-bar-div">
+					<div class="input-group md-form form-sm form-2 pl-0">
+						<input class="form-control" type="text" placeholder="Search">
+						<div class="input-group-append">
+							<span class="input-group-text red lighten-3" id="basic-text1">
+								<svg id="i-search" class="contrast" viewBox="0 0 32 32" width="20" fill="none" stroke="#808080" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+									<circle cx="14" cy="14" r="12" />
+									<path d="M23 23 L30 30" />
+								</svg>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="banner-container">
+			<!-- <div class="youtube-container">
+				<iframe width="680px" height="400px" src="https://www.youtube.com/embed/4K4QhIAfGKY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div> -->
+			<div id="playerContainer">
+				<div id="player"></div>
+			</div>
+			<div id="editor"></div>
+		</div>
+
+		<div id="rows-container">
+
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- ACE -->
+		<script src="ace-src/ace.js" type="text/javascript" charset="utf-8"></script>
+		<!-- load ace themelist extension -->
+		<script src="ace-src/ext-themelist.js"></script>
+
+		<script src="js/home-script.js"></script>
+		<!-- Begin the Player and editor -->
+		<script src="js/editorControl/editor.js"></script>
+		<script src="js/editorControl/fileManager.js"></script>
+		<script src="js/editorControl/control.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/video-script.js"></script>
+	</body>
+
+</html>

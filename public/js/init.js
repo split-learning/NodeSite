@@ -117,4 +117,4 @@ var loadJS = function(url, implementationCode, location){
 };
 
 // Load the transcript and video
-loadJS('/transcripts/'+youtubeID+'.js', onTranscriptReady, document.body)
+loadJS('transcripts/'+youtubeID+'.js', onTranscriptReady, document.body)
