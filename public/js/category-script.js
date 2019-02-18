@@ -42,7 +42,7 @@ $(".banner-container").ready(() => {
 
     let banner = $("<div class='banner' style='margin-top:10px;'>")
 
-    banner.append($("<img class='banner-thumbnail' src=\"/assets/thumbnails/"+encodeURIComponent(cat)+"_logo.png\"/>"))
+    banner.append($("<img class='banner-thumbnail' src=\"assets/thumbnails/"+encodeURIComponent(cat)+"_logo.png\"/>"))
     let banner_cell = $("<div class='banner-cell'>")
     banner.append(banner_cell);
     banner_cell.append($("<div class='banner-title'>").html(cat))
