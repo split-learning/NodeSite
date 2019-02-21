@@ -107,7 +107,8 @@ function onPlayerReady(event) {
 
 
 
-var loadJS = function(url, implementationCode, location){
+// https://stackoverflow.com/questions/14521108/dynamically-load-js-inside-js
+var loadJS = function(url, implementationCode, location, errorFunc){
     //url is URL of external file, implementationCode is the code
     //to be called from the file, location is the location to
     //insert the <script> element
@@ -117,9 +118,14 @@ var loadJS = function(url, implementationCode, location){
 
     scriptTag.onload = implementationCode;
     scriptTag.onreadystatechange = implementationCode;
+    scriptTag.onerror = errorFunc
 
     location.appendChild(scriptTag);
 };
 
 // Load the transcript and video
-loadJS('transcripts/'+youtubeID+'.js', onTranscriptReady, document.body)
+loadJS('transcripts/'+youtubeID+'.js', onTranscriptReady, document.body, function() {
+	// Error function, means no transcript
+	transcriptData = {"youtubeID":youtubeID,"formatArray":[]}
+	onTranscriptReady()
+})
