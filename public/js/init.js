@@ -127,5 +127,6 @@ var loadJS = function(url, implementationCode, location, errorFunc){
 loadJS('transcripts/'+youtubeID+'.js', onTranscriptReady, document.body, function() {
 	// Error function, means no transcript
 	transcriptData = {"youtubeID":youtubeID,"formatArray":[]}
+	$("#transcript-warning").show()
 	onTranscriptReady()
 })
