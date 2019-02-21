@@ -26,9 +26,9 @@ MultipleEditor.prototype.addFile = function (filename) {
 
   if (check) {
     // editorUI.createFile(filename);
-    $("#files").append(`
-      <li class="`+classFilename(filename)+` files-list">`+filename+`</li>
-      `)
+    // $("#files").append(`
+    //   <li class="`+classFilename(filename)+` files-list">`+filename+`</li>
+    //   `)
     this.selectFile(filename);
   }
 };

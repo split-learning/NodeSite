@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/generalStyle.css">
 		<link rel="stylesheet" href="css/flash.css">
 		<link rel="stylesheet" href="css/videoStyle.css" />
@@ -83,17 +84,27 @@
 			</div>
 
 			<div id="codeSide" class='col-md-6 col-xs-12'>
-				<ul class="nav nav-tabs" id="tabList" role="tablist">
-					<!-- 	<li class="nav-item">
-						<a class="nav-link active" id="main-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">main.js</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="more-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">more.js</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="even-more-tab" data-toggle="tab" role="tab" aria-controls="contact" aria-selected="false">even-more.js</a>
-					</li> -->
-				</ul>
+				<div class="tab-divs">
+					<ul class="nav nav-tabs" id="tabList" role="tablist">
+						<li id="untitiled-tab" class="nav-item">
+							<a class="active nav-link filename-tab sketchDjs" id="main-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" style="font-weight: bold;">Untitled</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-divs rightmost-tab">
+					<ul class="nav nav-tabs" id="tabList" role="tablist">
+						<li id="new-tab" class="nav-item record-item hide" isFile="false">
+							<a class="nav-link" id="even-more-tab" data-toggle="tab" role="tab" aria-controls="contact" aria-selected="false">
+								<i class="fas fa-plus-circle"></i>
+							</a>
+						</li>
+						<li id="save-json" class="nav-item record-item hide" style="padding-right: 0px" isFile="false">
+							<a class="nav-link" id="even-more-tab" data-toggle="tab" role="tab" aria-controls="contact" aria-selected="false">
+								<i class="far fa-save"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
 				<div id="editor"></div>
 			</div>
 		</div>
@@ -117,6 +128,7 @@
 		<script src="js/editorControl/control.js"></script>
 		<script src="js/init.js"></script>
 		<script src="js/video-script.js"></script>
+		<script src="js/record.js"></script>
 
 	</body>
 

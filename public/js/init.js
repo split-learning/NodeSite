@@ -21,6 +21,7 @@ if(typeof HOMEPAGE == undefined) {
 	    autoScrollEditorIntoView: true,
 	});
 }
+
 editor.setReadOnly(true)
 // editor.setReadOnly(true)
 // Disbale annotations
@@ -38,6 +39,8 @@ var aspect = 640/360
 // Find the get paramters
 const searchParams = new URLSearchParams(window.location.search)
 let youtubeID = searchParams.get('youtubeID')
+const record = searchParams.get('record') == 'true'
+
 console.log("Y", youtubeID)
 if(youtubeID == undefined) {
 	youtubeID = 'rHiSsgFRgx4'
@@ -45,7 +48,6 @@ if(youtubeID == undefined) {
 		youtubeID =  'rHiSsgFRgx4' //'4K4QhIAfGKY'
 	}
 }
-console.log("Y", youtubeID)
 
 var player;
 var dataFile = null
@@ -67,7 +69,7 @@ function loadYoutube() {
 }
 
 function onYouTubeIframeAPIReady() {
-	livePlayer = new CodingVideo(dataFile, EncapEditor)
+	livePlayer = new CodingVideo(dataFile, EncapEditor, record)
 	player = new YT.Player('player', {
 		height: playerSize,
 		width: playerSize * aspect,
@@ -77,6 +79,9 @@ function onYouTubeIframeAPIReady() {
 			'onStateChange': livePlayer.onPlayerStateChange
 		}
 	});
+	if(livePlayer.recording) {
+       add_recording()
+    }
 }
 
 // 4. The API will call this function when the video player is ready.

@@ -1,10 +1,20 @@
-$("body").on('click', "#codeSide .nav-item a", function() {
-  livePlayer.selectFile($(this).text())
-  if(livePlayer.getVirtualFile() == livePlayer.getSelectedFile()) {
-  	$(this).removeClass("flash")
-  }
+$("body").on('click', "#codeSide .nav-item a", function(e) {
+	var p = $(this).parent(".nav-item")
+	if(p.attr("isFile") == "false") {
+		return
+	}
+
+	livePlayer.selectFile($(this).text())
+	if(livePlayer.getVirtualFile() == livePlayer.getSelectedFile()) {
+		p.removeClass("flash")
+	}
 
 });
+
+$(".save-json").on('click', function() {
+	console.log("TEST")
+	$(this).removeClass("active")
+})
 
 let prev = ''
 setInterval(function(){
@@ -27,6 +37,7 @@ function classFilename(filename) {
 var selected = false
 function addFileToUI(filename) {
 	let a = ""
+	var untit = selected
 	if(!selected) { 
 		a = "active"
 		selected = true
@@ -37,4 +48,8 @@ function addFileToUI(filename) {
 			aria-controls="home" aria-selected="true">`+filename+`</a>
 		</li>`
 	$("#tabList").append(button)
+	if(!untit) {
+		$("#untitiled-tab").remove()
+	}
+	// $(button).insertBefore("#new-tab")
 }

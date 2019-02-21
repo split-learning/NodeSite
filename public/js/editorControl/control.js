@@ -5,7 +5,7 @@
 var livePlayer = null
 
 class CodingVideo {
-  constructor(file, multiEdit) {
+  constructor(file, multiEdit, record) {
       this.player = null
       this.file = file // JSON data file
       this.timestamp = 0
@@ -23,6 +23,7 @@ class CodingVideo {
         file:"",
         pos: {row:0, column:0}
       }
+      this.recording = record
 
       // TODO: Do not always run interval
       var lc = this
@@ -45,12 +46,16 @@ class CodingVideo {
   }
 
   addFile(filename) {
+    console.log("Adding file: ", filename)
     if(!this.files.includes(filename)) {
       let prev = this.selectedFile
       addFileToUI(filename)
       this.multiEdit.addFile(filename)
       this.multiEdit.editor.getSession().setOption("useWorker", false)
       this.files.push(filename)
+      if(this.recording){
+        add_sessionChange()
+      }
 
       if(prev != "") {
         this.selectFile(prev)
